@@ -1,0 +1,5 @@
+对比几类GC的日志（SerialGC-》ParallelGC-》ConcMarkSweepGC-》G1GC），感觉比较懵，对比的结果没有明显的规律。总结如下：
+1、从串行到并行到并发到G1，GC日志越来越复杂，尤其是G1GC的日志。
+2、GC暂停的时间G1最短，并行最长，同样的参数下CMSGC没有出现full gc。
+3、业务吞吐量CMS最大，其他依次是串行GC、并行GC、G1GC，其中G1GC的业务吞吐量下降非常明显。
+
