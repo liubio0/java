@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context-3.2.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="key101"
+          class="io.liuzm.springhomework.Key">
+        <property name="id" value="101" />
+        <property name="name" value="1" />
+    </bean>
+
+    <bean id="key102"
+          class="io.liuzm.springhomework.Key">
+        <property name="id" value="102" />
+        <property name="name" value="2" />
+    </bean>
+
+    <bean id="key103"
+          class="io.liuzm.springhomework.Key">
+        <property name="id" value="103" />
+        <property name="name" value="3" />
+    </bean>
+
+    <bean id="numkey" class="io.liuzm.springhomework.NumKey">
+        <property name="keys">
+            <list>
+                <ref bean="key102" />
+                <ref bean="key103" />
+            </list>
+        </property>
+    </bean>
+    
+    
+    <context:component-scan base-package="io.liuzm.springhomework" />
+    
+    <!--<bean id="aop1" class="io.liuzm.spring02.Aop1" />-->
+    
+    <!--<bean id="aop2" class="io.liuzm.spring02.Aop2" />-->
+    
+<!--    <aop:aspectj-autoproxy proxy-target-class="true" />-->
+    <aop:aspectj-autoproxy  />
+    <!---->
+    <!--<aop:config>-->
+        <!--<aop:pointcut expression="execution(* io.liuzm.aop.*.*(..))" id="p1" /> &lt;!&ndash;切点&ndash;&gt;-->
+        <!--<aop:aspect ref="aop1"> &lt;!&ndash;切面 &ndash;&gt;-->
+            <!--<aop:around method="around" pointcut-ref="p1" />-->
+            <!--<aop:before method="startTransaction" pointcut-ref="p1" /> &lt;!&ndash;前置通知&ndash;&gt;-->
+            <!--<aop:after-returning method="commitTransaction" pointcut-ref="p1"/> &lt;!&ndash;后置通知&ndash;&gt;-->
+        <!--</aop:aspect>-->
+    <!--</aop:config>-->
+
+<!--    <context:annotation-config />-->
+<!--    -->
+
+    <bean id="keyboard" class="io.liuzm.springhomework.Keyboard"></bean>
+    
+    
+</beans>
