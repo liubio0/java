@@ -1,0 +1,7 @@
+com\liuzm\starter\KeyConfiguration.class
+com\liuzm\starter\KeyProperties.class
+com\liuzm\starter\Key.class
+com\liuzm\starter\AutoConfiguration.class
+com\liuzm\starter\service\StarterService.class
+com\liuzm\starter\HomeworkSpringBootStarterApplication.class
+META-INF\spring-configuration-metadata.json

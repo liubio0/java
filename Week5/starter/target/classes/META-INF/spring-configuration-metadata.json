@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "web",
+      "type": "com.liuzm.starter.KeyProperties",
+      "sourceType": "com.liuzm.starter.KeyProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "web.a",
+      "type": "java.lang.String",
+      "sourceType": "com.liuzm.starter.KeyProperties",
+      "defaultValue": "super A "
+    }
+  ],
+  "hints": []
+}
